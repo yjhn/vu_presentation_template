@@ -1,0 +1,81 @@
+% Padaryta iš dalies pagal:
+% https://github.com/linas-p/VU-MIF-II-slides-template-1
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{textpos}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{caption}
+% Kadangi skaičių trupmeninės dalys atskiriamos kableliu,
+% po jo standartiškai dedamas tarpelis nepageidaujamas
+\usepackage{icomma}
+
+\setmainlanguage{lithuanian}
+% Add slide numbers (use \begin{frame}[plain] to suppress)
+%\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{footline}{%
+  \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[12pt]{\hspace*{\fill}\scriptsize\insertframenumber\hspace*{5pt}}}}}
+% Remove navigation bar
+\setbeamertemplate{navigation symbols}{}
+\usetheme{Rochester}
+
+%R:123 G:0 B:63
+\definecolor{VURed}{RGB}{123, 0, 63} % VU (primary)
+
+\setbeamercolor{palette primary}{bg=VURed,fg=white}
+\setbeamercolor{palette secondary}{bg=VURed,fg=white}
+\setbeamercolor{palette tertiary}{bg=VURed,fg=white}
+\setbeamercolor{palette quaternary}{bg=VURed,fg=white}
+\setbeamercolor{structure}{fg=VURed} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=VURed} % TOC sections
+
+% https://tex.stackexchange.com/questions/254814/is-it-possible-to-reduce-the-height-of-the-frame-title-box-in-beamer
+%\setbeamertemplate{frametitle}[default][center]
+\addtobeamertemplate{frametitle}{}{%
+    \begin{textblock*}{125mm}(.96\textwidth,-1.4cm)
+        \includegraphics[page=1,height=1.25cm]{img/VU_logo.pdf}
+    \end{textblock*}
+}
+
+\DeclareCaptionLabelFormat{simple}{#2 #1}
+\captionsetup*[table]{labelformat=simple,labelsep=period}
+\captionsetup*[figure]{labelformat=simple,labelsep=space,name=pav.}
+
+% Be skliaustų.
+\newcommand{\anglnb}[1]{angl.\ \textit{\textenglish{#1}}}
+% Su skliaustais.
+\newcommand{\angl}[1]{(\anglnb{#1})}
+
+
+\title{Programų sistemų kūrimo metodų tyrimas}
+\author{\texorpdfstring{Atliko: Vardenis Pavardenis\\
+        Darbo vadovas: prof. dr. Vardonis pavardonis\\
+        Darbo recenzentas: doc. dr. Vardauskas Pavardauskas}
+        {Vardenis Pavardenis}}
+\institute{Vilniaus universitetas\\Matematikos ir informatikos fakultetas\\Programų sistemų studijų programa}
+%\date{2023-06-12}
+\date[\today]{}
+
+
+\begin{document}
+
+\begingroup
+\setbeamertemplate{footline}{}
+\begin{frame}
+\titlepage
+\end{frame}
+\endgroup
+
+\begin{frame}{Skaidrės pavadinimas}
+\begin{itemize}
+    \item Punktas
+\end{itemize}
+\end{frame}
+
+\begin{frame}[plain]{Klausimai?}
+\centering
+\includegraphics[page=1, height=4cm]{img/question_mark.pdf}
+\end{frame}
+
+\end{document}
