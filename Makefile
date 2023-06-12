@@ -17,10 +17,6 @@ ubuntu:
 	@echo "Diegiamas LaTeX (LuaTeX, XeTeX ir kt.)"
 	sudo apt-get install texlive-full
 
-.PHONY: wordcount
-wordcount:
-	texcount -total -utf8 $(TEX_NAME)
-
 .PHONY: check
 check:
 	chktex $(TEX_NAME)
